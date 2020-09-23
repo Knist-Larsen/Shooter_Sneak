@@ -4,15 +4,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Collections;
+using System.Runtime.CompilerServices;
 
 public class enemyController : MonoBehaviour
 {
     public GameObject player;
-    public Queue<Vector3> checkpoints;
+    public GameObject nose;
+    public List<Vector3> checkpoints;
 
-    bool playerSeen = false;
+    Vector3 enemyPos;
+    public float synsfelt;
 
-    float coolDownTime = 5f;
     NavMeshAgent agent;
     Queue<Vector3> pathPoints = new Queue<Vector3>();
 
@@ -30,9 +32,9 @@ public class enemyController : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        
+        enemyPos = nose.transform.position;
 
-        if (playerSeen == false)
+        if (/*Vector3.Distance(player.transform.position, this.transform.position)*/ DistanceToPlayer(player.transform.position,enemyPos,synsfelt) > 5f)
         {
             if (ShouldSetDestination())
             {
@@ -40,23 +42,22 @@ public class enemyController : MonoBehaviour
             }
             if (pathPoints.Count == 0)
             {
-                pathPoints = checkpoints;
+                SetPoints(checkpoints);
             }
         }
-        if (playerSeen == true)
+        else
         {
+            pathPoints.Clear();
             // Sets the navigation for the enemy
-            agent.destination = player.transform.position;
+            agent.SetDestination(player.transform.position);
         }
     }
 
-    private void OnTriggerEnter(Collider player)
+    static float DistanceToPlayer(Vector3 player, Vector3 enemy, float synsfelt)
     {
-        playerSeen = true;
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        playerSeen = false;
+        enemy.z += 0.5f * synsfelt;
+
+        return Vector3.Distance(player, enemy);
     }
 
     private bool ShouldSetDestination()

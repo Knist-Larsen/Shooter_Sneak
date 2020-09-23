@@ -1035,11 +1035,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 443949456}
+  nose: {fileID: 525344834}
   checkpoints:
-  - {fileID: 100307636}
-  - {fileID: 564260317}
-  - {fileID: 220468625}
-  - {fileID: 2059767004}
+  - {x: 0, y: 0.5, z: -7.44}
+  - {x: -0.93, y: 0.5, z: 7.53}
+  - {x: -7.04, y: 0.5, z: 0}
+  - {x: 6.93, y: 0.5, z: 0}
+  synsfelt: 5
 --- !u!65 &1944809728
 BoxCollider:
   m_ObjectHideFlags: 0
