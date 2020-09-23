@@ -4,11 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-- master
+  - master
   - Target
   - lvl
   layers:
-  - Default
+  - Default:
   - TransparentFX
   - Ignore Raycast
   - 
