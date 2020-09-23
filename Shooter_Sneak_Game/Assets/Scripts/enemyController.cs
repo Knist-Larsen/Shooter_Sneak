@@ -24,6 +24,7 @@ public class enemyController : MonoBehaviour
         if (playerSeen == false)
         {
             //int i = 0;
+            /*
             for (int i = 0; i < checkpoints.Length;)
             {
                 agent.destination = checkpoints[i].transform.position;
@@ -32,6 +33,7 @@ public class enemyController : MonoBehaviour
                     i++;
                 }
             }
+            */
             /*
             while (i < checkpoints.Length)
             {
