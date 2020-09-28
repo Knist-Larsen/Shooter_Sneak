@@ -12,11 +12,17 @@ public class enemyController : MonoBehaviour
     public GameObject nose;
     public List<Vector3> checkpoints;
 
-    Vector3 enemyPos;
+    public static Vector3 enemyPos;
     public float synsfelt;
 
     NavMeshAgent agent;
     Queue<Vector3> pathPoints = new Queue<Vector3>();
+
+    public GameObject bullet;
+    public GameObject nose;
+    float time = 0;
+
+    public static bool playerSeen;
 
     // Start is called before the first frame update
     public void Start()
@@ -34,8 +40,9 @@ public class enemyController : MonoBehaviour
     {
         enemyPos = nose.transform.position;
 
-        if (/*Vector3.Distance(player.transform.position, this.transform.position)*/ DistanceToPlayer(player.transform.position,enemyPos,synsfelt) > 5f)
+        if (DistanceToPlayer(player.transform.position, enemyPos,synsfelt) > 5f)
         {
+            playerSeen = false;
             if (ShouldSetDestination())
             {
                 agent.SetDestination(pathPoints.Dequeue());
@@ -47,10 +54,24 @@ public class enemyController : MonoBehaviour
         }
         else
         {
+            playerSeen = true;
             pathPoints.Clear();
             // Sets the navigation for the enemy
             agent.SetDestination(player.transform.position);
         }
+    }
+    void FixedUpdate()
+    {
+        if (enemyController.playerSeen == true && time >= 3)
+        {
+            var clone = Instantiate(bullet, enemyController.enemyPos, nose.transform.rotation);
+
+            clone.name = "Bullet";
+            clone.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 1000);
+            time = 0;
+        }
+        time += Time.deltaTime;
+
     }
 
     static float DistanceToPlayer(Vector3 player, Vector3 enemy, float synsfelt)

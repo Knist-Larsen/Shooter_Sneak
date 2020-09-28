@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    private int life;
+    public static int life;
     private int maxLife = 3;
 
     public Text EnText;
