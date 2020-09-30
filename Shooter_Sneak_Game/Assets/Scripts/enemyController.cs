@@ -1,75 +1,98 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Collections;
+using System.Runtime.CompilerServices;
 
 public class enemyController : MonoBehaviour
 {
     public GameObject player;
-    public GameObject[] checkpoints;
+    public GameObject nose;
+    public List<Vector3> checkpoints;
 
-    bool playerSeen = false;
+    public static Vector3 enemyPos;
+    public float synsfelt;
 
-    float coolDownTime = 5f;
+    NavMeshAgent agent;
+    Queue<Vector3> pathPoints = new Queue<Vector3>();
+
+    public GameObject bullet;
+    float time = 0;
+
+    public static bool playerSeen;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
+        agent = GetComponent<NavMeshAgent>();
+    }
 
+    void SetPoints(IEnumerable<Vector3> points)
+    {
+        pathPoints = new Queue<Vector3>(points);
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        NavMeshAgent agent = GetComponent<NavMeshAgent>();
+        
 
-        if (playerSeen == false)
+
+        enemyPos = nose.transform.position;
+
+        if (DistanceToPlayer(player.transform.position, enemyPos,synsfelt) > 5f)
         {
-            //int i = 0;
-            /*
-            for (int i = 0; i < checkpoints.Length;)
+            playerSeen = false;
+            if (ShouldSetDestination())
             {
-                agent.destination = checkpoints[i].transform.position;
-                if (agent.destination == checkpoints[i].transform.position)
-                {
-                    i++;
-                }
+                agent.SetDestination(pathPoints.Dequeue());
             }
-            */
-            /*
-            while (i < checkpoints.Length)
+            if (pathPoints.Count == 0)
             {
-                agent.destination = checkpoints[i].transform.position;
-                
-                if (agent.destination == checkpoints[i].transform.position)
-                {
-                    i++;
-                }
-            }*/
+                SetPoints(checkpoints);
+            }
         }
-        if (playerSeen == true)
-        {
-            // Sets the navigation for the enemy
-            agent.destination = player.transform.position;
-        }
-    }
-
-    private void OnTriggerEnter(Collider player)
-    {/*
-        if (playerSeen == false)
+        else
         {
             playerSeen = true;
+            pathPoints.Clear();
+            // Sets the navigation for the enemy
+            agent.SetDestination(player.transform.position);
         }
-
-        float time = 0;
-        while (time < coolDownTime)
-        {
-            time += Time.deltaTime;
-        }
-        playerSeen = false; */
-
-        playerSeen = true;
     }
-    private void OnTriggerExit(Collider other)
+    void FixedUpdate()
     {
-        playerSeen = false;
+        if (enemyController.playerSeen == true && time >= 3)
+        {
+            var clone = Instantiate(bullet, enemyController.enemyPos, nose.transform.rotation);
+
+            clone.name = "Bullet";
+            clone.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 1000);
+            time = 0;
+        }
+        time += Time.deltaTime;
+
+    }
+
+    static float DistanceToPlayer(Vector3 player, Vector3 enemy, float synsfelt)
+    {
+        enemy.z += 0.5f * synsfelt;
+
+        return Vector3.Distance(player, enemy);
+    }
+
+    private bool ShouldSetDestination()
+    {
+        if (pathPoints.Count == 0)
+        {
+            return false;
+        }
+        if (agent.hasPath == false || agent.remainingDistance < 0.5f)
+        {
+            return true;
+        }
+        return false;
     }
 }

@@ -7,6 +7,7 @@ TagManager:
   - master
   - Target
   - lvl
+  - Bullet
   layers:
   - Default:
   - TransparentFX

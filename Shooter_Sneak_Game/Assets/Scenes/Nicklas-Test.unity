@@ -415,7 +415,7 @@ GameObject:
   - component: {fileID: 443949457}
   m_Layer: 0
   m_Name: Target
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -537,7 +537,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 525344834}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -826,6 +826,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &872093792
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 872093794}
+  - component: {fileID: 872093793}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &872093793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872093792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090a3c0fc74245b4c90c3c4ce79d7bea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnText: {fileID: 0}
+--- !u!4 &872093794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872093792}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1464716262
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,6 +1059,7 @@ GameObject:
   - component: {fileID: 1944809728}
   - component: {fileID: 1944809727}
   - component: {fileID: 1944809732}
+  - component: {fileID: 1944809733}
   m_Layer: 0
   m_Name: Fjende
   m_TagString: Untagged
@@ -1035,11 +1080,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 443949456}
+  nose: {fileID: 525344834}
   checkpoints:
-  - {fileID: 100307636}
-  - {fileID: 564260317}
-  - {fileID: 220468625}
-  - {fileID: 2059767004}
+  - {x: 0, y: 0.5, z: -7.44}
+  - {x: -0.93, y: 0.5, z: 7.53}
+  - {x: -7.04, y: 0.5, z: 0}
+  - {x: 6.93, y: 0.5, z: 0}
+  synsfelt: 5
 --- !u!65 &1944809728
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1048,7 +1095,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1944809726}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1139,6 +1186,21 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1944809733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944809726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed0c07e25b2437646b6813b61cbe6b0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 7820791366428382254, guid: de42d8789e9be6b4394f43d9d2e81556, type: 3}
+  nose: {fileID: 525344834}
+  life: 0
 --- !u!1 &2059767004
 GameObject:
   m_ObjectHideFlags: 0

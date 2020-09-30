@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public GameObject Heart1, Heart2, Heart3;
     [SerializeField]
     public static int life;
+    private int maxLife = 3;
     public Text EnText;
 
     // Start is called before the first frame update
@@ -19,7 +20,6 @@ public class GameManager : MonoBehaviour
         Heart1.gameObject.SetActive(true);
         Heart2.gameObject.SetActive(true);
         Heart3.gameObject.SetActive(true);
-
     }
 
     // Update is called once per frame
