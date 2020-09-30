@@ -19,7 +19,6 @@ public class enemyController : MonoBehaviour
     Queue<Vector3> pathPoints = new Queue<Vector3>();
 
     public GameObject bullet;
-    public GameObject nose;
     float time = 0;
 
     public static bool playerSeen;
@@ -38,6 +37,9 @@ public class enemyController : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
+        
+
+
         enemyPos = nose.transform.position;
 
         if (DistanceToPlayer(player.transform.position, enemyPos,synsfelt) > 5f)
