@@ -7,53 +7,58 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject Heart1, Heart2, Heart3;
+    [SerializeField]
     public static int life;
     private int maxLife = 3;
-
     public Text EnText;
-
-    
-
 
     // Start is called before the first frame update
     void Start()
     {
-        life = maxLife;
-
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        GameObject target = GameObject.FindGameObjectWithTag("Target");
-
-
+        life = 3;
+        Heart1.gameObject.SetActive(true);
+        Heart2.gameObject.SetActive(true);
+        Heart3.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        EndGame();
-
-
-    }
-
-    void EndGame()
-    {
-
-       
-
-
-    }
-
-    void LifeCounter()
-    {
-        if (life == 0)
+        if (life > 3)
+            life = 3;
+        switch (life)
         {
-            GameOver();
+            case 3:
+                Heart1.gameObject.SetActive(true);
+                Heart2.gameObject.SetActive(true);
+                Heart3.gameObject.SetActive(true);
+                break;
+            case 2:
+                Heart1.gameObject.SetActive(true);
+                Heart2.gameObject.SetActive(true);
+                Heart3.gameObject.SetActive(false);
+                break;
+            case 1:
+                Heart1.gameObject.SetActive(true);
+                Heart2.gameObject.SetActive(false);
+                Heart3.gameObject.SetActive(false);
+                break;
+            case 0:
+                Heart1.gameObject.SetActive(false);
+                Heart2.gameObject.SetActive(false);
+                Heart3.gameObject.SetActive(false);
+                GameOver();
+                break;
         }
 
-
     }
+
+
+    
     void GameOver()
     {
-        EnText.text = "Du har tabt";
+        EnText.text = "GameOver";
     }
 
 
