@@ -7,8 +7,9 @@ TagManager:
   - master
   - Target
   - lvl
+  - Bullet
   layers:
-  - Default:
+  - Default
   - TransparentFX
   - Ignore Raycast
   - 
