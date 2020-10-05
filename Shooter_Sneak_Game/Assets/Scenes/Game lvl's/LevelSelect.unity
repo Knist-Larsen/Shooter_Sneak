@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 114139536}
   - component: {fileID: 114139535}
   - component: {fileID: 114139534}
+  - component: {fileID: 114139537}
   m_Layer: 5
   m_Name: Level2Button
   m_TagString: Untagged
@@ -243,6 +244,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 114139532}
   m_CullTransparentMesh: 0
+--- !u!114 &114139537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114139532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0845c5a60faeaa4e880d0188700597c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  retry: 0
+  loadLvl: 3
+  btn: {fileID: 114139534}
 --- !u!1 &147987353
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,6 +536,7 @@ GameObject:
   - component: {fileID: 562355639}
   - component: {fileID: 562355638}
   - component: {fileID: 562355637}
+  - component: {fileID: 562355640}
   m_Layer: 5
   m_Name: Level1Button
   m_TagString: Untagged
@@ -589,19 +606,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 562355638}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: pauseMenu, Assembly-CSharp
-        m_MethodName: Resume
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &562355638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -640,6 +645,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 562355635}
   m_CullTransparentMesh: 0
+--- !u!114 &562355640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562355635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0845c5a60faeaa4e880d0188700597c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  retry: 0
+  loadLvl: 2
+  btn: {fileID: 562355637}
 --- !u!1 &633460024
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,6 +1011,7 @@ GameObject:
   - component: {fileID: 1757340792}
   - component: {fileID: 1757340791}
   - component: {fileID: 1757340790}
+  - component: {fileID: 1757340793}
   m_Layer: 5
   m_Name: Level3Button
   m_TagString: Untagged
@@ -1060,19 +1081,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1757340791}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: pauseMenu, Assembly-CSharp
-        m_MethodName: Resume
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1757340791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1111,6 +1120,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1757340788}
   m_CullTransparentMesh: 0
+--- !u!114 &1757340793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757340788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0845c5a60faeaa4e880d0188700597c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  retry: 0
+  loadLvl: 4
+  btn: {fileID: 1757340790}
 --- !u!1 &2083977718
 GameObject:
   m_ObjectHideFlags: 0

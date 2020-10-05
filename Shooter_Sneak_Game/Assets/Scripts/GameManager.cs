@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public static int life;
     private int maxLife = 3;
     public Text EnText;
+    public static bool targetDead = false;
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +54,7 @@ public class GameManager : MonoBehaviour
                 break;
         }
 
-        if (bulletController.collision.gameObject.tag == "Target")
+        if (targetDead == true)
         {
             SceneManager.LoadScene(0);
             Debug.Log("Target Dead");
@@ -66,6 +67,7 @@ public class GameManager : MonoBehaviour
     void GameOver()
     {
         EnText.text = "GameOver";
+
     }
 
 

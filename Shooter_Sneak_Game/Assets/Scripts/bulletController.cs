@@ -11,7 +11,11 @@ public class bulletController : MonoBehaviour
         {
             GameManager.life--;
         }
-        Destroy(gameObject);
+        if (collision1.gameObject.tag == "Target")
+        {
+            GameManager.targetDead = true;
+        }
         collision = collision1;
+        Destroy(gameObject);
     }
 }
