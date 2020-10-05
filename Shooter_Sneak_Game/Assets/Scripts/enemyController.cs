@@ -46,7 +46,7 @@ public class enemyController : MonoBehaviour
         enemyPos = transform.position;
         Vector3 startRay = enemyPos;
         Vector3 endRayPlayer = player.transform.position;
-        ray = new Ray(startRay, endRayPlayer);
+        ray = new Ray(startRay, endRayPlayer - startRay);
         if (CanMoveToPlayer(startRay, endRayPlayer - startRay))
         {
             pathPoints.Clear();
@@ -73,7 +73,7 @@ public class enemyController : MonoBehaviour
     {
         if (playerSeen == true && time >= 1)
         {
-            var clone = Instantiate(bullet, enemyPos, Quaternion.LookRotation(ray.direction));
+            var clone = Instantiate(bullet, nose.transform.position, Quaternion.LookRotation(ray.direction));
 
             clone.name = "Bullet";
             clone.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 1000);

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class GameManager : MonoBehaviour
@@ -50,6 +51,12 @@ public class GameManager : MonoBehaviour
                 Heart3.gameObject.SetActive(false);
                 GameOver();
                 break;
+        }
+
+        if (bulletController.collision.gameObject.tag == "Target")
+        {
+            SceneManager.LoadScene(0);
+            Debug.Log("Target Dead");
         }
 
     }

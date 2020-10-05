@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class bulletController : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    public static Collision collision;
+    private void OnCollisionEnter(Collision collision1)
     {
+        if (collision1.gameObject.tag == "Player")
+        {
+            GameManager.life--;
+        }
         Destroy(gameObject);
+        collision = collision1;
     }
 }
