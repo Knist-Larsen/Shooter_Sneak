@@ -23,9 +23,14 @@ public class enemyController : MonoBehaviour
 
     public static bool playerSeen;
 
+    private bool canMove;
+    RaycastHit hit;
+    Ray ray;
+
     // Start is called before the first frame update
     public void Start()
     {
+        canMove = true;
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -38,13 +43,20 @@ public class enemyController : MonoBehaviour
     public void Update()
     {
         
-
-
-        enemyPos = nose.transform.position;
-
-        if (DistanceToPlayer(player.transform.position, enemyPos,synsfelt) > 5f)
+        enemyPos = transform.position;
+        Vector3 startRay = enemyPos;
+        Vector3 endRayPlayer = player.transform.position;
+        ray = new Ray(startRay, endRayPlayer);
+        if (CanMoveToPlayer(startRay, endRayPlayer - startRay))
         {
-            playerSeen = false;
+            pathPoints.Clear();
+            // Sets the navigation for the enemy
+            agent.SetDestination(player.transform.position);
+            Debug.DrawRay(startRay, agent.destination - startRay, Color.red);
+            playerSeen = true;
+        }
+        else
+        {
             if (ShouldSetDestination())
             {
                 agent.SetDestination(pathPoints.Dequeue());
@@ -53,20 +65,15 @@ public class enemyController : MonoBehaviour
             {
                 SetPoints(checkpoints);
             }
-        }
-        else
-        {
-            playerSeen = true;
-            pathPoints.Clear();
-            // Sets the navigation for the enemy
-            agent.SetDestination(player.transform.position);
+            Debug.DrawRay(startRay, agent.destination - startRay, Color.green);
+            playerSeen = false;
         }
     }
     void FixedUpdate()
     {
-        if (enemyController.playerSeen == true && time >= 3)
+        if (playerSeen == true && time >= 1)
         {
-            var clone = Instantiate(bullet, enemyController.enemyPos, nose.transform.rotation);
+            var clone = Instantiate(bullet, enemyPos, Quaternion.LookRotation(ray.direction));
 
             clone.name = "Bullet";
             clone.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 1000);
@@ -75,14 +82,6 @@ public class enemyController : MonoBehaviour
         time += Time.deltaTime;
 
     }
-
-    static float DistanceToPlayer(Vector3 player, Vector3 enemy, float synsfelt)
-    {
-        enemy.z += 0.5f * synsfelt;
-
-        return Vector3.Distance(player, enemy);
-    }
-
     private bool ShouldSetDestination()
     {
         if (pathPoints.Count == 0)
@@ -94,5 +93,25 @@ public class enemyController : MonoBehaviour
             return true;
         }
         return false;
+    }
+    bool CanMoveToPlayer(Vector3 startRay, Vector3 endRay)
+    {
+        if (Physics.Raycast(startRay, endRay, out hit, 6))
+        {
+            if (hit.collider.gameObject.tag == "Player")
+            {
+                return true;
+            }
+            else
+            {
+                Debug.Log("I hit " + hit.collider.gameObject.name);
+                Debug.DrawRay(startRay, endRay, Color.yellow);
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
     }
 }

@@ -234,7 +234,7 @@ GameObject:
   - component: {fileID: 47982592}
   m_Layer: 0
   m_Name: bedroom
-  m_TagString: Untagged
+  m_TagString: lvl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -342,7 +342,7 @@ GameObject:
   - component: {fileID: 56971370}
   m_Layer: 0
   m_Name: wall 9
-  m_TagString: Untagged
+  m_TagString: lvl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -468,7 +468,7 @@ GameObject:
   - component: {fileID: 101308298}
   m_Layer: 0
   m_Name: Room 1
-  m_TagString: Untagged
+  m_TagString: lvl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
@@ -623,8 +623,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -137, y: -113}
-  m_SizeDelta: {x: 186.17462, y: 174.29727}
+  m_AnchoredPosition: {x: -300, y: -300}
+  m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &245080966
 MonoBehaviour:
@@ -774,7 +774,7 @@ GameObject:
   - component: {fileID: 338304816}
   m_Layer: 0
   m_Name: wall 6
-  m_TagString: Untagged
+  m_TagString: lvl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -866,7 +866,7 @@ GameObject:
   - component: {fileID: 453648871}
   m_Layer: 0
   m_Name: House frame
-  m_TagString: Untagged
+  m_TagString: lvl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -999,6 +999,10 @@ PrefabInstance:
     - target: {fileID: 189024, guid: d0bd8c282c04079498689c97fc865c70, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 189024, guid: d0bd8c282c04079498689c97fc865c70, type: 3}
+      propertyPath: m_TagString
+      value: lvl
       objectReference: {fileID: 0}
     - target: {fileID: 445052, guid: d0bd8c282c04079498689c97fc865c70, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1229,7 +1233,7 @@ GameObject:
   - component: {fileID: 589391686}
   m_Layer: 0
   m_Name: mainroom
-  m_TagString: Untagged
+  m_TagString: lvl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
@@ -1341,6 +1345,10 @@ PrefabInstance:
     - target: {fileID: 183330, guid: acbb3223474da5a478e39cc3031f80c9, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 183330, guid: acbb3223474da5a478e39cc3031f80c9, type: 3}
+      propertyPath: m_TagString
+      value: lvl
       objectReference: {fileID: 0}
     - target: {fileID: 429202, guid: acbb3223474da5a478e39cc3031f80c9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1874,6 +1882,11 @@ Transform:
   m_Father: {fileID: 1577699351}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &761186492 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 129800, guid: 1d3b1a1513de66247974634911345b98, type: 3}
+  m_PrefabInstance: {fileID: 611307108}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &782603885
 GameObject:
   m_ObjectHideFlags: 0
@@ -1960,7 +1973,7 @@ GameObject:
   - component: {fileID: 784014494}
   m_Layer: 0
   m_Name: wall 5
-  m_TagString: Untagged
+  m_TagString: lvl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -2055,7 +2068,7 @@ GameObject:
   - component: {fileID: 824274077}
   m_Layer: 0
   m_Name: top
-  m_TagString: Untagged
+  m_TagString: lvl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
@@ -2147,7 +2160,7 @@ GameObject:
   - component: {fileID: 835600472}
   m_Layer: 0
   m_Name: Room 2
-  m_TagString: Untagged
+  m_TagString: lvl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
@@ -2239,6 +2252,10 @@ PrefabInstance:
     - target: {fileID: 2469668704994240537, guid: 70ba99294aa3c1047a523b23d168a5d0, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2469668704994240537, guid: 70ba99294aa3c1047a523b23d168a5d0, type: 3}
+      propertyPath: m_TagString
+      value: lvl
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70ba99294aa3c1047a523b23d168a5d0, type: 3}
@@ -2559,7 +2576,7 @@ GameObject:
   - component: {fileID: 962823183}
   m_Layer: 0
   m_Name: office
-  m_TagString: Untagged
+  m_TagString: lvl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2667,7 +2684,7 @@ GameObject:
   - component: {fileID: 966615876}
   m_Layer: 0
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: lvl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -2782,8 +2799,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 136, y: -113}
-  m_SizeDelta: {x: 186.17462, y: 174.29727}
+  m_AnchoredPosition: {x: 300, y: -300}
+  m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &976984997
 MonoBehaviour:
@@ -2837,7 +2854,7 @@ GameObject:
   - component: {fileID: 997383034}
   m_Layer: 0
   m_Name: wall 10
-  m_TagString: Untagged
+  m_TagString: lvl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -3054,7 +3071,7 @@ GameObject:
   - component: {fileID: 1025740818}
   m_Layer: 0
   m_Name: wall 3
-  m_TagString: Untagged
+  m_TagString: lvl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -3146,7 +3163,7 @@ GameObject:
   - component: {fileID: 1085112606}
   m_Layer: 0
   m_Name: Rooms
-  m_TagString: Untagged
+  m_TagString: lvl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3178,7 +3195,7 @@ GameObject:
   - component: {fileID: 1099401976}
   m_Layer: 0
   m_Name: Roof
-  m_TagString: Untagged
+  m_TagString: lvl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3214,7 +3231,7 @@ GameObject:
   - component: {fileID: 1113821649}
   m_Layer: 0
   m_Name: wall 7
-  m_TagString: Untagged
+  m_TagString: lvl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -3444,8 +3461,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 158.06, y: 131.28}
-  m_SizeDelta: {x: 374.54102, y: 174.4024}
+  m_AnchoredPosition: {x: 350, y: 130}
+  m_SizeDelta: {x: 600, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1226552345
 MonoBehaviour:
@@ -3469,7 +3486,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 24
+    m_FontSize: 36
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -3504,7 +3521,7 @@ GameObject:
   - component: {fileID: 1247834807}
   m_Layer: 0
   m_Name: wall 8
-  m_TagString: Untagged
+  m_TagString: lvl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -3599,7 +3616,7 @@ GameObject:
   - component: {fileID: 1288170971}
   m_Layer: 0
   m_Name: wall 2
-  m_TagString: Untagged
+  m_TagString: lvl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -3694,7 +3711,7 @@ GameObject:
   - component: {fileID: 1298197368}
   m_Layer: 0
   m_Name: right
-  m_TagString: Untagged
+  m_TagString: lvl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
@@ -3812,8 +3829,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -273.19}
-  m_SizeDelta: {x: 294.91266, y: 34.17456}
+  m_AnchoredPosition: {x: 0, y: -50}
+  m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1349451592
 MonoBehaviour:
@@ -4048,7 +4065,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -20.243103}
+  m_AnchoredPosition: {x: 0, y: -20.243042}
   m_SizeDelta: {x: -341, y: -220.63953}
   m_Pivot: {x: 0.5, y: 0.7282526}
 --- !u!114 &1401498350
@@ -4398,7 +4415,7 @@ GameObject:
   - component: {fileID: 1516033843}
   m_Layer: 0
   m_Name: Furniture
-  m_TagString: Untagged
+  m_TagString: lvl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4439,7 +4456,7 @@ GameObject:
   - component: {fileID: 1521471008}
   m_Layer: 0
   m_Name: wall 11
-  m_TagString: Untagged
+  m_TagString: lvl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -4539,6 +4556,10 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 142088, guid: b2b198fe16deabc4381aadb7da5d00e9, type: 3}
+      propertyPath: m_TagString
+      value: lvl
+      objectReference: {fileID: 0}
     - target: {fileID: 467772, guid: b2b198fe16deabc4381aadb7da5d00e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.9
@@ -4620,6 +4641,10 @@ PrefabInstance:
     - target: {fileID: 143048, guid: ad90aafd907a0d746a6ea2e80c266671, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 143048, guid: ad90aafd907a0d746a6ea2e80c266671, type: 3}
+      propertyPath: m_TagString
+      value: lvl
       objectReference: {fileID: 0}
     - target: {fileID: 493854, guid: ad90aafd907a0d746a6ea2e80c266671, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4790,7 +4815,7 @@ GameObject:
   - component: {fileID: 1593457786}
   m_Layer: 0
   m_Name: wall 1 w door
-  m_TagString: Untagged
+  m_TagString: lvl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
@@ -4856,12 +4881,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aba11e79dddf2f49b3e0e1b58f01af7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1577699346}
+  player: {fileID: 761186492}
   nose: {fileID: 1608170915}
   checkpoints:
   - {x: 6.62, y: -6.17, z: 6.77}
   - {x: -9.94, y: -6.17, z: 6.77}
-  synsfelt: 15
+  synsfelt: 50
   bullet: {fileID: 1666615662836427108, guid: c747898e256973d448fed16a72b67a5c, type: 3}
 --- !u!4 &1605182667 stripped
 Transform:
@@ -4932,8 +4957,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -113}
-  m_SizeDelta: {x: 186.17462, y: 174.29727}
+  m_AnchoredPosition: {x: 0, y: -300}
+  m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1652102142
 MonoBehaviour:
@@ -4987,7 +5012,7 @@ GameObject:
   - component: {fileID: 1672703334}
   m_Layer: 0
   m_Name: wall 4
-  m_TagString: Untagged
+  m_TagString: lvl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
@@ -5196,6 +5221,10 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1730799327064730, guid: b3cc1460da1cba94698e508b498e589c, type: 3}
+      propertyPath: m_TagString
+      value: lvl
+      objectReference: {fileID: 0}
     - target: {fileID: 4390997628649526, guid: b3cc1460da1cba94698e508b498e589c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.169056
@@ -5277,6 +5306,10 @@ PrefabInstance:
     - target: {fileID: 1260501652137496, guid: ba577e1642715534585fb21ba6d0529a, type: 3}
       propertyPath: m_NavMeshLayer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1260501652137496, guid: ba577e1642715534585fb21ba6d0529a, type: 3}
+      propertyPath: m_TagString
+      value: lvl
       objectReference: {fileID: 0}
     - target: {fileID: 4068732887779152, guid: ba577e1642715534585fb21ba6d0529a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5412,6 +5445,10 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2469668704994240537, guid: 70ba99294aa3c1047a523b23d168a5d0, type: 3}
+      propertyPath: m_TagString
+      value: lvl
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70ba99294aa3c1047a523b23d168a5d0, type: 3}
 --- !u!4 &1874578442 stripped
@@ -5539,8 +5576,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -166, y: 130.56}
-  m_SizeDelta: {x: 246.58249, y: 172.96017}
+  m_AnchoredPosition: {x: -250, y: 130}
+  m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1946996513
 MonoBehaviour:
@@ -5564,7 +5601,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 24
+    m_FontSize: 36
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -5598,7 +5635,7 @@ GameObject:
   - component: {fileID: 2044621101}
   m_Layer: 0
   m_Name: left
-  m_TagString: Untagged
+  m_TagString: lvl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
