@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class sceneSelector : MonoBehaviour
 {
-    public bool retry = false;
     public int loadLvl;
     public Button btn;
 
@@ -20,14 +19,6 @@ public class sceneSelector : MonoBehaviour
 
     void TaskOnClick()
     {
-        if (retry == false)
-        {
-            SceneManager.LoadScene(loadLvl);
-            print("Nu loades level med indeks " + loadLvl);
-        }
-        else
-        {
-            
-        }
+        SceneManager.LoadScene(loadLvl);
     }
 }

@@ -21,16 +21,14 @@ public class enemyController : MonoBehaviour
     public GameObject bullet;
     float time = 0;
 
-    public static bool playerSeen;
+    public bool playerSeen;
 
-    private bool canMove;
     RaycastHit hit;
     Ray ray;
 
     // Start is called before the first frame update
     public void Start()
     {
-        canMove = true;
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -74,7 +72,7 @@ public class enemyController : MonoBehaviour
         if (playerSeen == true && time >= 1)
         {
             var clone = Instantiate(bullet, nose.transform.position, Quaternion.LookRotation(ray.direction));
-
+            Debug.Log("Playerseen");
             clone.name = "Bullet";
             clone.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 1000);
             time = 0;
