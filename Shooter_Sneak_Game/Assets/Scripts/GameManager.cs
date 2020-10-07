@@ -56,8 +56,10 @@ public class GameManager : MonoBehaviour
 
         if (targetDead == true)
         {
+            SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
             SceneManager.LoadScene(0);
-            Debug.Log("Target Dead");
+            targetDead = false;
+            print("Target er død og level blev unloadet");
         }
 
     }
@@ -67,6 +69,8 @@ public class GameManager : MonoBehaviour
     void GameOver()
     {
         EnText.text = "GameOver";
+        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(1);
 
     }
 

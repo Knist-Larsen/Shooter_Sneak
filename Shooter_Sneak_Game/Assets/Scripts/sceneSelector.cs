@@ -23,6 +23,7 @@ public class sceneSelector : MonoBehaviour
         if (retry == false)
         {
             SceneManager.LoadScene(loadLvl);
+            print("Nu loades level med indeks " + loadLvl);
         }
         else
         {
