@@ -15,7 +15,7 @@ public class killEnemy : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if(col.gameObject.tag == "Bullet")
+        if(col.gameObject.tag == "PlayerBullet")
         {
             print("Hit");
             //animator.SetTrigger("Dead");

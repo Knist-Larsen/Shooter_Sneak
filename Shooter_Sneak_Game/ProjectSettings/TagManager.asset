@@ -9,6 +9,7 @@ TagManager:
   - lvl
   - Bullet
   - Enemy
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX
