@@ -62,6 +62,11 @@ public class GameManager : MonoBehaviour
             print("Target er død og level blev unloadet");
         }
 
+
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
 
