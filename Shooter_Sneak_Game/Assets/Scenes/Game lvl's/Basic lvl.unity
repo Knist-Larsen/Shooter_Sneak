@@ -2949,6 +2949,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VindMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 1183084832509370883, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1183084832509370884, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
