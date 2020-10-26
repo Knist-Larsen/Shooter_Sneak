@@ -317,7 +317,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &81940962
 Transform:
   m_ObjectHideFlags: 0
@@ -614,6 +614,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54b7b010e0ad81b46b9f4c1b407fc867, type: 3}
+--- !u!1 &175156834 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2262923003842687574, guid: 25f96bf24a3ffec4593b1f42f039f754, type: 3}
+  m_PrefabInstance: {fileID: 136860137663339345}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &175156836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175156834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0845c5a60faeaa4e880d0188700597c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadLvl: 0
+  btn: {fileID: 1110383470}
 --- !u!1 &230592250
 GameObject:
   m_ObjectHideFlags: 0
@@ -2828,7 +2847,7 @@ MonoBehaviour:
   pauseMenuUI: {fileID: 373132772}
   "forts\xE6tBtn": {fileID: 652846966}
   hoveMenuBtn: {fileID: 1110383470}
-  settingsBtn: {fileID: 1503883238}
+  settingsBtn: {fileID: 0}
   hovedmenuBuildIndex: 0
   settingsBuildIndex: 0
 --- !u!1001 &727201326
@@ -2941,6 +2960,10 @@ PrefabInstance:
     - target: {fileID: 5549290948189422117, guid: e9dd68427dd09a844a353e5dbbf7a158, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7184279460556496239, guid: e9dd68427dd09a844a353e5dbbf7a158, type: 3}
+      propertyPath: m_Text
+      value: Hovedmenu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9dd68427dd09a844a353e5dbbf7a158, type: 3}
@@ -4904,7 +4927,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 82462345163175750, guid: 25f96bf24a3ffec4593b1f42f039f754, type: 3}
   m_PrefabInstance: {fileID: 136860137663339345}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 175156834}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -6801,17 +6824,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1503883238 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3588414550854910313, guid: 25f96bf24a3ffec4593b1f42f039f754, type: 3}
-  m_PrefabInstance: {fileID: 136860137663339345}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1551772952
 GameObject:
   m_ObjectHideFlags: 0
@@ -8000,7 +8012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0845c5a60faeaa4e880d0188700597c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadLvl: 0
+  loadLvl: 5
   btn: {fileID: 1750263236}
 --- !u!114 &1750263236 stripped
 MonoBehaviour:
@@ -8923,6 +8935,10 @@ PrefabInstance:
     - target: {fileID: 1183084832509370884, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.79999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996909132462803804, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
+      propertyPath: m_Text
+      value: Hovedmenu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}

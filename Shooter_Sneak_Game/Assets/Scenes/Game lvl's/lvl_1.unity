@@ -1630,7 +1630,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1041718708
 Transform:
   m_ObjectHideFlags: 0
@@ -2945,6 +2945,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1328677329}
     m_Modifications:
+    - target: {fileID: 1183084832313505191, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 312.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1183084832509370883, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
       propertyPath: m_Name
       value: VindMenu
@@ -2999,35 +3003,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1183084832509370884, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.00018310547
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1183084832509370884, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 87.64905
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1183084832509370884, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 734
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1183084832509370884, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 384
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1183084832509370884, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1183084832509370884, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1183084832509370884, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1183084832509370884, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1183084832509370884, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
       propertyPath: m_Pivot.x
@@ -3035,7 +3039,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1183084832509370884, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
       propertyPath: m_Pivot.y
-      value: 0.7282526
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183084833265242929, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
+      propertyPath: m_Text
+      value: "N\xE6ste Level"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996909132462803804, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
+      propertyPath: m_Text
+      value: Hovedmenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478486156191595465, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
+      propertyPath: loadLvl
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
