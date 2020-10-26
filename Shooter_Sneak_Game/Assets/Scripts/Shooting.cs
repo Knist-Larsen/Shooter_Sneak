@@ -16,9 +16,11 @@ public class Shooting : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Shoot();
+            if (pauseMenu.GameIsPaused == false)
+            {
+                Shoot();
+            }
         }
-        
     }
 
     void Shoot()

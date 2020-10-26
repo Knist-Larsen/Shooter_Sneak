@@ -11,8 +11,6 @@ public class GameManager : MonoBehaviour
     public GameObject Heart1, Heart2, Heart3;
     [SerializeField]
     public static int life;
-    private int maxLife = 3;
-    public Text EnText;
     public static bool targetDead = false;
 
     // Start is called before the first frame update
@@ -61,19 +59,13 @@ public class GameManager : MonoBehaviour
             targetDead = false;
             print("Target er død og level blev unloadet");
         }
-
-
-        if (Input.GetKey(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
+        
     }
 
 
     
     void GameOver()
     {
-        EnText.text = "GameOver";
         SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene(1);
 

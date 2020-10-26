@@ -8,6 +8,10 @@ public class sceneSelector : MonoBehaviour
 {
     public int loadLvl;
     public Button btn;
+    public bool fortsæt = false;
+    public bool hovedmenu = false;
+    public bool indstillinger = false;
+    public GameObject panel;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +23,10 @@ public class sceneSelector : MonoBehaviour
 
     void TaskOnClick()
     {
+        if (fortsæt == true)
+        {
+            Destroy(panel);
+        }
         SceneManager.LoadScene(loadLvl);
     }
 }
