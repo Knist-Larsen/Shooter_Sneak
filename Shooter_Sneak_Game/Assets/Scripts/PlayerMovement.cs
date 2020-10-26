@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     Vector3 move;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -33,8 +32,10 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         //bevæger spilleren ud fra den bevægelsesvektor, der blev lavet i update
-        rb.MovePosition(rb.position + move * speed * Time.fixedDeltaTime);
-
+        if (pauseMenu.GameIsPaused == false)
+        {
+            rb.MovePosition(rb.position + move * speed * Time.fixedDeltaTime);
+        }
     }
 
     void LookAtMouse()
@@ -48,7 +49,5 @@ public class PlayerMovement : MonoBehaviour
             Vector3 pointToLook = cameraRay.GetPoint(rayLength);
             transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
         }
-    }
-
-    
+    } 
 }

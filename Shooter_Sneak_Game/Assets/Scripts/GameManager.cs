@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public static int life;
     public static bool targetDead = false;
+    public GameObject gameOverMenu;
+    public GameObject vindMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +22,8 @@ public class GameManager : MonoBehaviour
         Heart1.gameObject.SetActive(true);
         Heart2.gameObject.SetActive(true);
         Heart3.gameObject.SetActive(true);
+        gameOverMenu.SetActive(false);
+        vindMenu.SetActive(false);
     }
 
     // Update is called once per frame
@@ -54,22 +58,22 @@ public class GameManager : MonoBehaviour
 
         if (targetDead == true)
         {
-            SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-            SceneManager.LoadScene(0);
+            GameVon();
             targetDead = false;
             print("Target er død og level blev unloadet");
         }
         
     }
 
-
-    
     void GameOver()
     {
-        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-        SceneManager.LoadScene(1);
-
+        gameOverMenu.SetActive(true);
+        pauseMenu.GameIsPaused = true;
     }
 
-
+    void GameVon()
+    {
+        vindMenu.SetActive(true);
+        pauseMenu.GameIsPaused = true;
+    }
 }
