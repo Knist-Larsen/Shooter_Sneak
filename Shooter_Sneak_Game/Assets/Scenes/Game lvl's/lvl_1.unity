@@ -1061,42 +1061,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Panel
       objectReference: {fileID: 0}
-    - target: {fileID: 7166091321307201915, guid: 0cd13bdf718ce3849b8bc4bf6a30945c, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 349
-      objectReference: {fileID: 0}
-    - target: {fileID: 7166091321307201915, guid: 0cd13bdf718ce3849b8bc4bf6a30945c, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 349
-      objectReference: {fileID: 0}
-    - target: {fileID: 7166091321307201915, guid: 0cd13bdf718ce3849b8bc4bf6a30945c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 240
-      objectReference: {fileID: 0}
-    - target: {fileID: 7166091321490880880, guid: 0cd13bdf718ce3849b8bc4bf6a30945c, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 349
-      objectReference: {fileID: 0}
-    - target: {fileID: 7166091321490880880, guid: 0cd13bdf718ce3849b8bc4bf6a30945c, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 349
-      objectReference: {fileID: 0}
-    - target: {fileID: 7166091321490880880, guid: 0cd13bdf718ce3849b8bc4bf6a30945c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 130
-      objectReference: {fileID: 0}
-    - target: {fileID: 7166091321490880880, guid: 0cd13bdf718ce3849b8bc4bf6a30945c, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -20
-      objectReference: {fileID: 0}
-    - target: {fileID: 7166091321544084882, guid: 0cd13bdf718ce3849b8bc4bf6a30945c, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 349.03986
-      objectReference: {fileID: 0}
-    - target: {fileID: 7166091321544084882, guid: 0cd13bdf718ce3849b8bc4bf6a30945c, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 349.03986
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cd13bdf718ce3849b8bc4bf6a30945c, type: 3}
 --- !u!1 &760636368
@@ -1194,17 +1158,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760636368}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &802438933 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3588414550854910313, guid: 25f96bf24a3ffec4593b1f42f039f754, type: 3}
-  m_PrefabInstance: {fileID: 305067111}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &817889962 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1183084832509370883, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
@@ -2154,7 +2107,7 @@ MonoBehaviour:
   pauseMenuUI: {fileID: 1166100965}
   "forts\xE6tBtn": {fileID: 991962672}
   hoveMenuBtn: {fileID: 130680733}
-  settingsBtn: {fileID: 802438933}
+  settingsBtn: {fileID: 0}
   hovedmenuBuildIndex: 0
   settingsBuildIndex: 0
 --- !u!1 &1350564352
