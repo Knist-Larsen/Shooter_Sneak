@@ -94,7 +94,7 @@ public class enemyController : MonoBehaviour
     }
     bool CanMoveToPlayer(Vector3 startRay, Vector3 endRay)
     {
-        if (Physics.Raycast(startRay, endRay, out hit, 12))
+        if (Physics.Raycast(startRay, endRay, out hit, synsfelt))
         {
             if (hit.collider.gameObject.tag == "Player")
             {

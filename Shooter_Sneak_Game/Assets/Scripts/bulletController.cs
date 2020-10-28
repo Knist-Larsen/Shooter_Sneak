@@ -7,13 +7,19 @@ public class bulletController : MonoBehaviour
     public static Collision collision;
     private void OnCollisionEnter(Collision collision1)
     {
-        if (collision1.gameObject.tag == "Player")
+        if (this.tag == "PlayerBullet")
         {
-            GameManager.life--;
+            if (collision1.gameObject.tag == "Target")
+            {
+                GameManager.targetDead = true;
+            }
         }
-        if (collision1.gameObject.tag == "Target")
+        if (this.tag == "Bullet")
         {
-            GameManager.targetDead = true;
+            if (collision1.gameObject.tag == "Player")
+            {
+                GameManager.life--;
+            }
         }
         collision = collision1;
         Destroy(gameObject);
