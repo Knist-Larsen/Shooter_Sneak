@@ -778,7 +778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2a91dfcc316d16469733e6d87525615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 634943020}
+  player: {fileID: 0}
   cameraOffset: 10
 --- !u!1 &229185543 stripped
 GameObject:
@@ -1483,11 +1483,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.99947596, y: 1.8474804, z: 0.943053}
   m_Center: {x: -0.055054367, y: 0.9245339, z: 0.0005270542}
---- !u!4 &634943020 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5909332144302576417, guid: 958f41d0e2239ee41a573a7ebf25c39a, type: 3}
-  m_PrefabInstance: {fileID: 5909332143836472589}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &734735418
 GameObject:
   m_ObjectHideFlags: 0
@@ -2079,17 +2074,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &882530099 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3588414550854910313, guid: 25f96bf24a3ffec4593b1f42f039f754, type: 3}
-  m_PrefabInstance: {fileID: 1911212456}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &958177422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3080,7 +3064,7 @@ MonoBehaviour:
   pauseMenuUI: {fileID: 1918145218}
   "forts\xE6tBtn": {fileID: 37990006}
   hoveMenuBtn: {fileID: 1522701542}
-  settingsBtn: {fileID: 882530099}
+  settingsBtn: {fileID: 0}
   hovedmenuBuildIndex: 0
   settingsBuildIndex: 0
 --- !u!1 &1169479021
@@ -3961,6 +3945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89eee33920f86a742b00960fb7170888, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weapon: {fileID: 0}
 --- !u!1001 &1571687349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4767,6 +4752,10 @@ PrefabInstance:
     - target: {fileID: 4908439243141008077, guid: 25f96bf24a3ffec4593b1f42f039f754, type: 3}
       propertyPath: m_Name
       value: PauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4908439243141008077, guid: 25f96bf24a3ffec4593b1f42f039f754, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25f96bf24a3ffec4593b1f42f039f754, type: 3}
