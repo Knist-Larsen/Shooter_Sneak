@@ -245,6 +245,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1183084832509370884, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
   m_PrefabInstance: {fileID: 144639194}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &144639196 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1183084832509370883, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
+  m_PrefabInstance: {fileID: 144639194}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &180438441
 GameObject:
   m_ObjectHideFlags: 0
@@ -1695,7 +1700,7 @@ MonoBehaviour:
   Heart2: {fileID: 30301110}
   Heart3: {fileID: 971990895}
   gameOverMenu: {fileID: 0}
-  vindMenu: {fileID: 0}
+  vindMenu: {fileID: 144639196}
 --- !u!4 &966630619
 Transform:
   m_ObjectHideFlags: 0
