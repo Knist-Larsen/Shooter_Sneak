@@ -238,6 +238,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.7282526
       objectReference: {fileID: 0}
+    - target: {fileID: 8478486156191595465, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
+      propertyPath: loadLvl
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
 --- !u!224 &144639195 stripped
@@ -1314,6 +1318,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5909332144473402654, guid: 958f41d0e2239ee41a573a7ebf25c39a, type: 3}
+      propertyPath: bulletScale.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5909332144473402654, guid: 958f41d0e2239ee41a573a7ebf25c39a, type: 3}
+      propertyPath: bulletScale.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5909332144473402654, guid: 958f41d0e2239ee41a573a7ebf25c39a, type: 3}
+      propertyPath: bulletScale.z
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 5909332144473402655, guid: 958f41d0e2239ee41a573a7ebf25c39a, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1695,7 +1711,7 @@ MonoBehaviour:
   Heart2: {fileID: 30301110}
   Heart3: {fileID: 971990895}
   gameOverMenu: {fileID: 0}
-  vindMenu: {fileID: 0}
+  vindMenu: {fileID: 1827127171}
 --- !u!4 &966630619
 Transform:
   m_ObjectHideFlags: 0
@@ -3053,6 +3069,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1668231898}
   m_CullTransparentMesh: 0
+--- !u!1 &1827127171 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1183084832509370883, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
+  m_PrefabInstance: {fileID: 144639194}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1866240010
 PrefabInstance:
   m_ObjectHideFlags: 0

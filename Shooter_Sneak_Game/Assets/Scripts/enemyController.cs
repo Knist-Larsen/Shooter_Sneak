@@ -19,6 +19,7 @@ public class enemyController : MonoBehaviour
     Queue<Vector3> pathPoints = new Queue<Vector3>();
 
     public GameObject bullet;
+    public Vector3 bulletScale = new Vector3(1,1,1);
     float time = 0;
 
     public bool playerSeen;
@@ -75,6 +76,7 @@ public class enemyController : MonoBehaviour
             Debug.Log("Playerseen");
             clone.name = "Bullet";
             clone.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 1000);
+            clone.transform.localScale = bulletScale;
             time = 0;
         }
         time += Time.deltaTime;

@@ -12,6 +12,7 @@ public class bulletController : MonoBehaviour
             if (collision1.gameObject.tag == "Target")
             {
                 GameManager.targetDead = true;
+                Debug.Log("Enemy Hit");
             }
         }
         if (this.tag == "Bullet")
