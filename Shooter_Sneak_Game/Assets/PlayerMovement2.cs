@@ -7,11 +7,13 @@ public class PlayerMovement2 : MonoBehaviour
     Vector3 move;
     public float speed;
     GameObject player;
+    CharacterController controller;
 
     // Start is called before the first frame update
     void Start()
     {
         player = this.gameObject;
+        controller = gameObject.AddComponent<CharacterController>(); // Tilføjer en CharacterController til spilleren
     }
 
     // Update is called once per frame
@@ -23,6 +25,17 @@ public class PlayerMovement2 : MonoBehaviour
         if (pauseMenu.GameIsPaused == false)
         {
             LookAtMouse();
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (pauseMenu.GameIsPaused == false)
+        {
+            if (controller.isGrounded && move.y < 0f)
+            {
+                move.y = 0f;
+            }
         }
     }
 
