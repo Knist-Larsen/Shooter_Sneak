@@ -26,6 +26,7 @@ public class killEnemy : MonoBehaviour
             weapon.AddComponent<Rigidbody>();
             //Destroy(weapon);
             //Destroy(gameObject);
+            gameObject.
         }
         
     }

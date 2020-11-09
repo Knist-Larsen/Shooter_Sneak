@@ -778,8 +778,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2a91dfcc316d16469733e6d87525615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   player: {fileID: 0}
   cameraOffset: 10
+=======
+  player: {fileID: 535012550}
+  cameraOffset: 25
+>>>>>>> Stashed changes
 --- !u!1 &229185543 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1183084832509370883, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
@@ -1168,6 +1173,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 498965452}
   m_CullTransparentMesh: 0
+--- !u!4 &535012550 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5909332144473402650, guid: 958f41d0e2239ee41a573a7ebf25c39a, type: 3}
+  m_PrefabInstance: {fileID: 5909332143836472589}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &538472555
 PrefabInstance:
   m_ObjectHideFlags: 0
