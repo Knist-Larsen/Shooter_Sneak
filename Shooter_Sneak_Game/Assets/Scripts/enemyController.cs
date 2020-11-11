@@ -1,10 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Collections;
-using System.Runtime.CompilerServices;
 
 public class enemyController : MonoBehaviour
 {
@@ -38,7 +34,7 @@ public class enemyController : MonoBehaviour
         pathPoints = new Queue<Vector3>(points);
     }
 
-    // Update is called once per frame
+    // Bliver kaldt 1 gang per frame
     public void Update()
     {
         
@@ -68,20 +64,28 @@ public class enemyController : MonoBehaviour
             playerSeen = false;
         }
     }
+
+    // Bliver kaldt 60 gange i sekundet
     void FixedUpdate()
     {
+        // Tjekker om spilleren er blevet set, og der er gået 1 sekund
         if (playerSeen == true && time >= 1)
         {
+            // sætter en kugle ind i scenen, for enden af geværet i spillerens retning
             var clone = Instantiate(bullet, nose.transform.position, Quaternion.LookRotation(ray.direction));
             Debug.Log("Playerseen");
             clone.name = "Bullet";
             clone.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * 1000);
             clone.transform.localScale = bulletScale;
+            // Sætter tiden tilbage til 0
             time = 0;
         }
+        // Tilføjer den tid der er gået siden sidste opdatering til den samlede tid
         time += Time.deltaTime;
 
     }
+
+    // Tjekker om Fjenden skal starte på en ny rute
     private bool ShouldSetDestination()
     {
         if (pathPoints.Count == 0)
@@ -94,14 +98,19 @@ public class enemyController : MonoBehaviour
         }
         return false;
     }
+
+    // Tjekker om Fjenden kan se spilleren
     bool CanMoveToPlayer(Vector3 startRay, Vector3 endRay)
     {
+        // Tjekker om der er en lige linje til spilleren, & at spilleren er inden for rækkevidde
         if (Physics.Raycast(startRay, endRay, out hit, synsfelt))
         {
+            // Tjekker om det er spilleren der bliver set
             if (hit.collider.gameObject.tag == "Player")
             {
                 return true;
             }
+            // Andgiver hvad der blev ramt, når det ikke var spilleren
             else
             {
                 Debug.Log("I hit " + hit.collider.gameObject.name);

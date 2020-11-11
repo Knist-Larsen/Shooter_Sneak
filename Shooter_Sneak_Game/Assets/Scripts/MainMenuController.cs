@@ -10,6 +10,7 @@ public class MainMenuController : MonoBehaviour
     public GameObject thisPanel;
     public GameObject nextPanel;
     public bool QuitBtn;
+    public bool Story;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,14 @@ public class MainMenuController : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Story == true && Input.GetButtonDown("Space"))
+        {
+            ThisBtn();
+        }
+    }
+
     void ThisBtn()
     {
         thisPanel.SetActive(false);
@@ -34,4 +43,6 @@ public class MainMenuController : MonoBehaviour
     {
         Application.Quit();
     }
+
+
 }
