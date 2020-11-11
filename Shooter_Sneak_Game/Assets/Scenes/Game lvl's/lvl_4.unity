@@ -615,6 +615,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54b7b010e0ad81b46b9f4c1b407fc867, type: 3}
+--- !u!1 &119234963 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5549290948189422117, guid: e9dd68427dd09a844a353e5dbbf7a158, type: 3}
+  m_PrefabInstance: {fileID: 953553505}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &119234965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119234963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0845c5a60faeaa4e880d0188700597c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadLvl: 5
+  btn: {fileID: 119234966}
+--- !u!114 &119234966 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5549290948189422119, guid: e9dd68427dd09a844a353e5dbbf7a158, type: 3}
+  m_PrefabInstance: {fileID: 953553505}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119234963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &129046563
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2949,6 +2979,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 725417075}
     m_Modifications:
+    - target: {fileID: 1183084832313505190, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1183084832509370883, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
       propertyPath: m_Name
       value: VindMenu
