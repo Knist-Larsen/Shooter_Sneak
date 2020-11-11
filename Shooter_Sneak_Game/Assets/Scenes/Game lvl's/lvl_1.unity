@@ -358,6 +358,7 @@ MonoBehaviour:
   thisPanel: {fileID: 136374523}
   nextPanel: {fileID: 2045459794}
   QuitBtn: 0
+  Story: 1
 --- !u!114 &136374526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1310,6 +1311,7 @@ MonoBehaviour:
   thisPanel: {fileID: 384862976}
   nextPanel: {fileID: 1178135183}
   QuitBtn: 0
+  Story: 1
 --- !u!114 &384862979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2717,6 +2719,7 @@ MonoBehaviour:
   thisPanel: {fileID: 931425116}
   nextPanel: {fileID: 1317269049}
   QuitBtn: 0
+  Story: 1
 --- !u!114 &931425119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3638,6 +3641,7 @@ MonoBehaviour:
   thisPanel: {fileID: 1176153447}
   nextPanel: {fileID: 931425116}
   QuitBtn: 0
+  Story: 1
 --- !u!114 &1176153450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3731,6 +3735,7 @@ MonoBehaviour:
   thisPanel: {fileID: 1178135183}
   nextPanel: {fileID: 1350564352}
   QuitBtn: 0
+  Story: 1
 --- !u!114 &1178135186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3969,6 +3974,7 @@ MonoBehaviour:
   thisPanel: {fileID: 1317269049}
   nextPanel: {fileID: 1442996153}
   QuitBtn: 0
+  Story: 1
 --- !u!114 &1317269052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4656,6 +4662,7 @@ MonoBehaviour:
   thisPanel: {fileID: 1442996153}
   nextPanel: {fileID: 136374523}
   QuitBtn: 0
+  Story: 1
 --- !u!114 &1442996156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5465,6 +5472,7 @@ MonoBehaviour:
   thisPanel: {fileID: 2045459794}
   nextPanel: {fileID: 384862976}
   QuitBtn: 0
+  Story: 1
 --- !u!114 &2045459797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5558,6 +5566,7 @@ MonoBehaviour:
   thisPanel: {fileID: 2060602221}
   nextPanel: {fileID: 1176153447}
   QuitBtn: 0
+  Story: 1
 --- !u!114 &2060602224
 MonoBehaviour:
   m_ObjectHideFlags: 0
