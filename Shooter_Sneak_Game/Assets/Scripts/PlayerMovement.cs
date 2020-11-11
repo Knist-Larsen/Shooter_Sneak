@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
         //opretter bevægelsesvektor ud fra WASD eller piletaster. .normalized sørger for, at spilleren ikke går hurtigere, når man går skråt (fx trykker fx både W og D ned samtidig)
         move = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
 
-        //kalder funktion, der får spilleren til at se mod cursoren
+        //kalder funktion, der får spilleren til at se mod cursoren, såfremt spillet ikke er på pause
         if (pauseMenu.GameIsPaused == false)
         {
             LookAtMouse();
@@ -40,10 +40,12 @@ public class PlayerMovement : MonoBehaviour
 
     void LookAtMouse()
     {
+
         Ray cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
         Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
         float rayLength;
         
+        //hvis raycastet fra kameraet rammer groundplane, så dannes der en vektor, som playeren ser på
         if (groundPlane.Raycast(cameraRay, out rayLength))
         {
             Vector3 pointToLook = cameraRay.GetPoint(rayLength);
