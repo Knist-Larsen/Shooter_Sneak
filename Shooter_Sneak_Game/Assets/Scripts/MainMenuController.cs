@@ -28,7 +28,7 @@ public class MainMenuController : MonoBehaviour
 
     private void Update()
     {
-        if (Story == true && Input.GetButtonDown("Space"))
+        if (Story == true && Input.GetButtonDown("Jump"))
         {
             ThisBtn();
         }
