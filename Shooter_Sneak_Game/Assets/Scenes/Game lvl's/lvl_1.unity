@@ -207,6 +207,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 44866955}
   m_CullTransparentMesh: 0
+--- !u!1 &75213449 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1183084832509370883, guid: 0b98d30f51c8ffe40aa42e7647f02223, type: 3}
+  m_PrefabInstance: {fileID: 144639194}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &130680733 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 82462345163175750, guid: 25f96bf24a3ffec4593b1f42f039f754, type: 3}
@@ -1794,7 +1799,7 @@ MonoBehaviour:
   Heart2: {fileID: 30301110}
   Heart3: {fileID: 971990895}
   gameOverMenu: {fileID: 0}
-  vindMenu: {fileID: 0}
+  vindMenu: {fileID: 75213449}
 --- !u!4 &966630619
 Transform:
   m_ObjectHideFlags: 0
