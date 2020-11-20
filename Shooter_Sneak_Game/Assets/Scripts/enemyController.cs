@@ -45,7 +45,7 @@ public class enemyController : MonoBehaviour
         if (CanMoveToPlayer(startRay, endRayPlayer - startRay))
         {
             pathPoints.Clear();
-            // Sets the navigation for the enemy
+            // Setter navigationen for fjenden
             agent.SetDestination(player.transform.position);
             Debug.DrawRay(startRay, agent.destination - startRay, Color.red);
             playerSeen = true;

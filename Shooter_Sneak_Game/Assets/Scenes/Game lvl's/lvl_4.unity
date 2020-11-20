@@ -1384,7 +1384,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8686075095915962315, guid: 2c05754d9ffe94b4c8cbc0a1db634c9a, type: 3}
       propertyPath: cameraOffset
-      value: 23
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 8686075095915962315, guid: 2c05754d9ffe94b4c8cbc0a1db634c9a, type: 3}
       propertyPath: player
